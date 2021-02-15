@@ -1,0 +1,38 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>TRIAL PERIOD</title>
+</head>
+<body>
+<section id="form-section">
+<div class="right-container">
+<div class="free-container">
+<h4>Try it Free for 7 days, then $20/month</h4>
+</div>
+<div  class="form-container">
+ <br> <form name="loginform" onsubmit="return validation()"> </br>
+<br> <input type="text" name="fname" placeholder="First Name">  </br>
+<br> <input type="text" name="lname" placeholder="Last Name">  </br>
+<br> <input type="Email" name="mailid" placeholder="Email Address">  </br>
+<br> <input type="Password" name="pwd" placeholder="Password">  </br>
+<br> <button type="submit" id="submit-btn">Claim your free Trial</button>  </br>
+</form>
+<p id="terms">By clicking this button you are agreeing to out <a href="#">terms and services</a></p>
+</div>
+</div>
+</section>
+<script src="index.js"></script>
+</body>
+</html>
+function validation() {
+var fname = document.loginform.fname.value;
+var lname = document.loginform.lname.value;
+var pwd = document.loginform.pwd.value;
+if (fname == null || fname == "" || lname == null || lname == ""){
+alert("Name cant be Blank");
+return false;
+} else if (pwd == null || pwd == "" || pwd.length < 5) {
+alert("Password must be atleast 6 characters long..");
+return false;
+}
+}
